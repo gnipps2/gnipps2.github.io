@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className="mt-16 md:mt-24">
             <p className="font-serif italic text-2xl md:text-4xl text-[#c9a96e] leading-snug">
-              "Habillé pour bouger, fait pour durer."
+              "Quiet Confident."
             </p>
             <p className="mt-4 uppercase tracking-[0.2em] text-xs opacity-50 font-bold">
               — The LÉRIC Philosophy
