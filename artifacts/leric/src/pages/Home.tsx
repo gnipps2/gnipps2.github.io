@@ -41,23 +41,22 @@ export default function Home() {
         </nav>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center flex-1 py-12 w-full max-w-4xl mx-auto">
-          <p className="uppercase tracking-[0.45em] text-[10px] text-[#D4B785] mb-8 font-medium">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center flex-1 py-8 w-full max-w-5xl mx-auto">
+          <p className="uppercase tracking-[0.45em] text-[10px] text-[#D4B785] mb-6 font-medium">
             The Debut Collection
           </p>
 
-          <h1 className="font-serif font-bold text-[clamp(4.5rem,13vw,13rem)] leading-[0.9] text-[#f0ead6] tracking-tight mb-10">
+          <h1 className="font-serif font-bold text-[clamp(4.5rem,13vw,13rem)] leading-[0.9] text-[#f0ead6] tracking-tight mb-6">
             LÉRIC
           </h1>
 
-          <div className="w-10 h-[1px] bg-[#D4B785] mb-10 opacity-70" />
+          <div className="w-10 h-[1px] bg-[#D4B785] mb-8 opacity-70" />
 
-          <p className="text-[#f0ead6]/75 text-sm md:text-base font-light leading-relaxed max-w-sm tracking-wide" style={{ marginBottom: "56px" }}>
-            Premium activewear for the discerning few.<br />
-            Engineered for performance. Worn for distinction.
+          <p className="text-[#f0ead6]/75 text-base md:text-lg font-light leading-relaxed tracking-wide max-w-xl" style={{ marginBottom: "48px" }}>
+            Premium activewear for the discerning few — engineered for performance, worn for distinction.
           </p>
 
-          <div className="w-full max-w-md">
+          <div className="w-full max-w-lg">
             <EmailForm buttonText="Get Early Access" align="center" />
           </div>
         </div>
