@@ -53,22 +53,24 @@ export function EmailForm({ buttonText = "Notify Me", align = "center", darkBord
         noValidate
         className="flex flex-col sm:flex-row items-stretch gap-0 w-full"
       >
+        {/* Input: py-4 = 16px vertical, px-0 horizontal — bottom-border only */}
         <input
           type="email"
           value={email}
           onChange={(e) => { setEmail(e.target.value); if (error) setError(""); }}
           placeholder="Enter your email address"
-          className={`flex-1 min-w-0 bg-transparent border-b ${borderColor} ${placeholderColor} ${textColor} py-[14px] px-0 outline-none font-sans text-sm transition-colors duration-300 rounded-none sm:mr-6`}
+          className={`flex-1 min-w-0 bg-transparent border-b ${borderColor} ${placeholderColor} ${textColor} py-4 px-0 outline-none font-sans text-sm transition-colors duration-300 rounded-none sm:mr-6`}
         />
+        {/* Button: px-10 (40px) × py-4 (16px) = 2.5× ratio ✓ — min 8px vertical, 2–3× horizontal */}
         <button
           type="submit"
-          className="mt-4 sm:mt-0 shrink-0 px-8 py-[14px] bg-[#D4B785] text-black uppercase tracking-[0.2em] text-xs font-bold hover:opacity-90 active:opacity-80 transition-opacity duration-200 whitespace-nowrap w-full sm:w-auto"
+          className="mt-4 sm:mt-0 shrink-0 px-10 py-4 bg-[#D4B785] text-black uppercase tracking-[0.2em] text-xs font-bold hover:opacity-90 active:opacity-80 transition-opacity duration-200 whitespace-nowrap w-full sm:w-auto"
         >
           {buttonText}
         </button>
       </form>
       {error && (
-        <p className="mt-3 text-xs text-red-400 font-sans tracking-wide">{error}</p>
+        <p className="mt-2 text-xs text-red-400 font-sans tracking-wide">{error}</p>
       )}
     </div>
   );
