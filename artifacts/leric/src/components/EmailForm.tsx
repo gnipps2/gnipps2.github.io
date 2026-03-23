@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function EmailForm({ buttonText = "Notify Me" }: { buttonText?: string }) {
+export function EmailForm({ buttonText = "Notify Me", align = "center" }: { buttonText?: string; align?: "center" | "left" }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -23,7 +23,7 @@ export function EmailForm({ buttonText = "Notify Me" }: { buttonText?: string })
   return (
     <form 
       onSubmit={handleSubmit} 
-      className="flex flex-col sm:flex-row items-center gap-6 w-full max-w-md mx-auto animate-in fade-in duration-1000 delay-300 fill-mode-both"
+      className={`flex flex-col sm:flex-row items-center gap-6 w-full max-w-md animate-in fade-in duration-1000 delay-300 fill-mode-both ${align === "center" ? "mx-auto" : ""}`}
     >
       <input
         type="email"
