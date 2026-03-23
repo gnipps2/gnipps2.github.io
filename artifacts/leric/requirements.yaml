@@ -1,0 +1,6 @@
+packages: {}
+images: []
+notes:
+  - "Static landing page only. No API dependencies."
+  - "Storing waitlist emails in localStorage."
+  - "Using Unsplash or standard CSS gradients for backgrounds to maintain performance."

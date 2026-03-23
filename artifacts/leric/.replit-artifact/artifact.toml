@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "LÉRIC"
+version = "1.0.0"
+id = "artifacts/leric"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21663
+
+[services.development]
+run = "pnpm --filter @workspace/leric run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/leric", "run", "build" ]
+publicDir = "artifacts/leric/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21663"
+BASE_PATH = "/"
