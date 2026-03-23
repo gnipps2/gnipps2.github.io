@@ -1,0 +1,80 @@
+Global Styling & UI Specifications
+Color Palette:
+
+Background: Deep Black (#000000 or #0A0A0A)
+
+Accent/CTA: Soft Gold/Beige (Sample: #D4B785 - Dev to match exact design file)
+
+Headings: Soft Gold/Beige or Off-White
+
+Body Text: Light Grey/Off-White (Must pass WCAG AA contrast ratio against the black background, e.g., #B0B0B0 or lighter).
+
+Typography:
+
+Primary (Logo/Headlines): High-contrast Serif (e.g., Playfair Display or similar).
+
+Secondary (Body/Nav/Buttons): Clean, geometric Sans-Serif.
+
+Background Asset (New): Implement a subtle, looping background video or static texture (e.g., premium fabric texture or moody studio lighting).
+
+Dev Note: Overlay with a black mask at 85-90% opacity so the text remains the absolute focal point.
+
+3. Component Breakdown & Functionality
+A. Top Navigation
+Left: LÉRIC Logo (Static).
+
+Center: "LUXURY ACTIVEWEAR" (Static text, tracked out/wide letter-spacing).
+
+Right ("COMING SOON"): * Action: Remove the rectangular border.
+
+Styling: Display as standard, elegant text. It is a status indicator, not a clickable button.
+
+B. Hero Section (Text)
+Subhead: "THE DEBUT COLLECTION" (Gold, wide letter-spacing).
+
+Main Title: "LÉRIC" (Large serif, distinct styling on the 'É').
+
+Body Paragraph: * Action: Lighten the font color for better readability.
+
+Action: Increase the margin-bottom between this paragraph and the email form to increase negative space (aim for at least 48px to 64px spacing).
+
+C. Email Capture Block (Critical Fixes)
+Layout: Inline form on desktop; stacked vertically on mobile.
+
+Email Input Field:
+
+type="email", required.
+
+Placeholder Text: "Enter your email address" (Must be fully visible, fix truncation).
+
+Styling: Transparent background, visible bottom border. Increase bottom border opacity (e.g., 1px solid rgba(255, 255, 255, 0.4)) so it is clearly visible.
+
+Padding: Add internal padding (e.g., 12px 0) so the typing cursor doesn't clip the edges.
+
+Height: Must perfectly match the height of the CTA button next to it.
+
+CTA Button ("GET EARLY ACCESS"):
+
+Styling: Solid gold/beige background, black sans-serif text, bold.
+
+Hover State: Background slightly brightens or lowers in opacity (e.g., 90% opacity) on mouse hover.
+
+Form Behavior & Validation:
+
+Empty Submit: Show inline error: "Please enter your email address."
+
+Invalid Format: Show inline error: "Please enter a valid email address."
+
+Success State: Upon successful submission, hide the form inputs and display a success message: "Thank you. You are on the list." (in the brand's serif font).
+
+4. Mobile Responsiveness
+Nav: Hide the center "LUXURY ACTIVEWEAR" text on mobile to prevent crowding. Keep Logo (left) and "COMING SOON" (right).
+
+Form: The email input and CTA button should break into two rows on mobile (stacked), both taking up width: 100% for easy tapping.
+
+Typography: Scale down the main "LÉRIC" hero text so it doesn't break into multiple awkward lines on smaller screens.
+
+5. Backend / Integrations
+ESP Integration: Form must be linked to the brand's Email Service Provider (e.g., Klaviyo, Mailchimp) via API or embed script.
+
+Tagging: Ensure submitted emails are tagged automatically with "Debut Collection Waitlist" in the database.
