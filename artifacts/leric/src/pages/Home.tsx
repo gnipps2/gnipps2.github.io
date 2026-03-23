@@ -31,13 +31,17 @@ export default function Home() {
           <span className="uppercase tracking-[0.35em] text-[10px] text-[#f0ead6]/45 font-medium hidden md:block">
             Luxury Activewear
           </span>
-          <span className="uppercase tracking-[0.3em] text-[10px] text-[#D4B785]/80 font-medium">
+          <a
+            href="#countdown"
+            onClick={(e) => { e.preventDefault(); document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="uppercase tracking-[0.3em] text-[10px] text-[#D4B785]/80 font-medium border border-[#D4B785]/40 px-3 py-1.5 hover:border-[#D4B785] hover:text-[#D4B785] transition-all duration-300 cursor-pointer"
+          >
             Coming Soon
-          </span>
+          </a>
         </nav>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-start justify-center flex-1 py-12 max-w-5xl">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center flex-1 py-12 w-full max-w-4xl mx-auto">
           <p className="uppercase tracking-[0.45em] text-[10px] text-[#D4B785] mb-8 font-medium">
             The Debut Collection
           </p>
@@ -48,13 +52,13 @@ export default function Home() {
 
           <div className="w-10 h-[1px] bg-[#D4B785] mb-10 opacity-70" />
 
-          <p className="text-[#f0ead6]/75 text-sm md:text-base font-light leading-relaxed max-w-xs md:max-w-sm tracking-wide" style={{ marginBottom: "56px" }}>
+          <p className="text-[#f0ead6]/75 text-sm md:text-base font-light leading-relaxed max-w-sm tracking-wide" style={{ marginBottom: "56px" }}>
             Premium activewear for the discerning few.<br />
             Engineered for performance. Worn for distinction.
           </p>
 
-          <div className="w-full max-w-lg">
-            <EmailForm buttonText="Get Early Access" align="left" />
+          <div className="w-full max-w-md">
+            <EmailForm buttonText="Get Early Access" align="center" />
           </div>
         </div>
 
@@ -123,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* 4. COUNTDOWN SECTION */}
-      <section className="bg-[#f5f0e8] text-[#1a1a1a] py-28 md:py-44 px-6">
+      <section id="countdown" className="bg-[#f5f0e8] text-[#1a1a1a] py-28 md:py-44 px-6">
         <div className="max-w-5xl mx-auto flex flex-col items-center">
           <p className="uppercase tracking-[0.4em] text-[10px] text-[#D4B785] mb-8 font-medium">Mark Your Calendar</p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-20 text-center">
